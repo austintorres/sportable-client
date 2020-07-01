@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Sportable</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,47 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <!-- headers -->
+      <h1 id="sign-up-msg">Please Sign-Up</h1>
+      <h1 id="sign-in-msg">Please Sign-In</h1>
+      <h1 id="welcome-msg">Welcome</h1>
+
+      <!-- forms and divs -->
+      <section>
+        <!-- user sign-up -->
+        <form id="sign-up">
+          <input required placeholder="Enter e-mail" type="text" name="credentials[email]">
+          <input required placeholder="Enter password" type="password" name="credentials[password]">
+          <input required placeholder="Re-enter password" type="password" name="credentials[password_confirmation]">
+          <button type="submit">Sign Up</button>
+        </form>
+        <!-- user sign-in -->
+        <form id="sign-in">
+          <input required placeholder="Enter e-mail" type="text" name="credentials[email]">
+          <input required placeholder="Enter password" type="password" name="credentials[password]">
+          <button type="submit">Sign In</button>
+        </form>
+        <!-- user sign-out -->
+        <form id="sign-out">
+          <button type="submit">Sign Out</button>
+        </form>
+        <!-- change password -->
+        <form id="change-password">
+          <input required placeholder="Old password" type="password" name="passwords[old]">
+          <input placeholder="New password" type="password" name="passwords[new]">
+          <button type="submit">Change Password</button>
+        </form>
+        <!-- already a member -->
+        <form id="member-switch">
+          <button type="submit">Already A Member?</button>
+        </form>
+        <!-- not a member -->
+        <form id="non-member-switch">
+          <button type="submit">Not A Member?</button>
+        </form>
+      </section>
+
+      <!-- messages -->
+      <p id="message"></p>
     </body>
 </html>
