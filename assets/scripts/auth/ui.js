@@ -29,6 +29,8 @@ const signInSuccess = function (response) {
   $('#sign-out').show()
   $('#welcome-msg').show()
   $('#change-password').show()
+  $('#create-league').show()
+  $('#view-all-leagues-button').show()
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-in-msg').hide()
@@ -48,10 +50,14 @@ const signOutSuccess = function (response) {
   $('#message').show().removeClass().addClass('success')
   store.user.token = null
   $('#sign-up').show()
+  $('#sign-up-msg').show()
   $('#member-switch').show()
   $('#sign-in').hide()
   $('#sign-out').hide()
   $('#change-password').hide()
+  $('#create-league').hide()
+  $('#welcome-msg').hide()
+  $('#view-all-leagues-button').hide()
 }
 
 const signOutFailure = function (response) {

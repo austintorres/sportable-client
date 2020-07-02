@@ -1,0 +1,25 @@
+{{#each leagues as |league|}}
+  {{log league}}
+  <form data-id="{{league.id}}">
+    <h6>Sport:</h6>
+    <p>
+      {{#if league.sport}}
+        {{league.sport}}
+      {{/if}}
+    </p>
+    <h6>Name:</h6>
+    <p>
+      {{#if league.sport}}
+        {{league.sport}}
+      {{/if}}
+    </p>
+    <h6>Description:</h6>
+    <p>
+      {{#if league.description}}
+        {{league.description}}
+      {{/if}}
+    </p>
+    <button class="btn btn-danger" data-id="{{league.id}}">Delete League</button>
+  </section>
+
+{{/each}}

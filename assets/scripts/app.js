@@ -1,6 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events')
+const leagueEvents = require('./league/events')
 
 $(() => {
   // EVENTS
@@ -9,6 +10,8 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePw)
   $('#member-switch').on('click', authEvents.onToggleSignIn)
+  $('#create-league').on('submit', leagueEvents.onLeagueCreate)
+  $('#view-all-leagues-button').on('click', leagueEvents.onGetLeagues)
   // USER DOCS
   $('#sign-up').show()
   $('#sign-in').hide()
@@ -18,4 +21,6 @@ $(() => {
   // HTML DOCS
   $('#sign-in-msg').hide()
   $('#welcome-msg').hide()
+  $('#create-league').hide()
+  $('#view-all-leagues-button').hide()
 })
