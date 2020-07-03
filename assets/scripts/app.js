@@ -12,6 +12,9 @@ $(() => {
   $('#member-switch').on('click', authEvents.onToggleSignIn)
   $('#create-league').on('submit', leagueEvents.onLeagueCreate)
   $('#view-all-leagues-button').on('click', leagueEvents.onGetLeagues)
+  $('.content').on('click', '.remove-league', leagueEvents.onDeleteLeague)
+  $('.content').on('submit', '.update-league-class', leagueEvents.onUpdateLeague)
+  $('#clear-leagues-button').on('click', leagueEvents.onClearLeague)
   // USER DOCS
   $('#sign-up').show()
   $('#sign-in').hide()
@@ -23,4 +26,5 @@ $(() => {
   $('#welcome-msg').hide()
   $('#create-league').hide()
   $('#view-all-leagues-button').hide()
+  $('#clear-leagues-button').hide()
 })

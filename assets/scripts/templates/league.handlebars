@@ -1,6 +1,6 @@
 {{#each leagues as |league|}}
   {{log league}}
-  <form data-id="{{league.id}}">
+  <form data-id="{{league._id}}">
     <h6>Sport:</h6>
     <p>
       {{#if league.sport}}
@@ -19,7 +19,14 @@
         {{league.description}}
       {{/if}}
     </p>
-    <button class="btn btn-danger" data-id="{{league.id}}">Delete League</button>
+    <p>Update:</p>
+    <form class="update-league-class" data-id="{{league._id}}">
+      <input required placeholder="Sport (Baseball, Football, etc.)" type="text" name="league[sport]">
+      <input required placeholder="Name of Sport (MLB, NFL, etc.)" type="text" name="league[name]">
+      <input required placeholder="Description (Favorite team, player, etc.)" type="text" name="league[description]">
+      <button type="submit" class="update-league btn btn-success">Update</button>
+    </form>
+    <button class="remove-league btn btn-danger" data-id="{{league._id}}">Delete</button>
   </section>
 
 {{/each}}

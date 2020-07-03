@@ -18,7 +18,33 @@ const onGetLeagues = function (event) {
     .catch(ui.getLeaguesFailure)
 }
 
+const onDeleteLeague = (event) => {
+  event.preventDefault()
+  const id = $(event.target).data('id')
+  api.leagueDestroy(id)
+    .then(() => ui.deleteLeagueSuccess(id))
+    .catch(ui.deleteLeagueFailure)
+}
+
+const onUpdateLeague = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+  const id = $(event.target).data('id')
+  api.leagueUpdate(data, id)
+    .then(ui.updateLeagueSuccess)
+    .catch(ui.updateLeagueFailure)
+}
+
+const onClearLeague = function (event) {
+  event.preventDefault()
+  ui.clearLeagues()
+}
+
 module.exports = {
   onLeagueCreate,
-  onGetLeagues
+  onGetLeagues,
+  onDeleteLeague,
+  onUpdateLeague,
+  onClearLeague
 }

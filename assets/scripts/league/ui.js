@@ -18,8 +18,10 @@ const getLeaguesSuccess = function (data) {
   store.leagues = data.leagues
   console.log(data)
   const leaguesHtml = leaguesTemplate({ leagues: data.leagues })
+  $('#league-create-msg').hide()
+  $('#clear-leagues-button').show()
   $('.content').append(leaguesHtml)
-  $('#')
+  $('#view-leagues-msg').text('Here are your created leagues!')
 }
 
 const getLeaguesFailure = function () {
@@ -28,9 +30,22 @@ const getLeaguesFailure = function () {
   $('#view-leagues-msg').show().removeClass().addClass('failure')
 }
 
+const updateLeagueSuccess = function (id) {
+  $('form').trigger('reset')
+  $('#update-league-msg').text('Update successful!')
+}
+
+const updateLeagueFailure = function () {
+  $('form').trigger('reset')
+  $('#update-league-msg').text('Uh oh. Something went wrong!')
+}
+
 const deleteLeagueSuccess = function (id) {
+  $('#view-leagues-msg').hide()
+  $('#del-league-msg').text('League was deleted!')
+  $('.remove-league').show()
   $(`[data-id="${id}"]`).remove()
-  console.log('League Was Deleted')
+  console.log('Delete was successful!')
 }
 
 const deleteLeagueFailure = function () {
@@ -39,11 +54,18 @@ const deleteLeagueFailure = function () {
   $('#view-leagues-msg').show().removeClass().addClass('failure')
 }
 
+const clearLeagues = function () {
+  $('.content').empty()
+}
+
 module.exports = {
   createLeagueSuccess,
   createLeagueFailure,
   getLeaguesSuccess,
   getLeaguesFailure,
+  updateLeagueSuccess,
+  updateLeagueFailure,
   deleteLeagueSuccess,
-  deleteLeagueFailure
+  deleteLeagueFailure,
+  clearLeagues
 }

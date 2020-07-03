@@ -23,7 +23,7 @@ const leagueCreate = function (data) {
 // delete a league
 const leagueDestroy = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/leagues/' + store.league.id,
+    url: config.apiUrl + '/leagues/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -47,7 +47,7 @@ const leagueIndex = function () {
 const leagueUpdate = function (data, id) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/leagues/' + store.league.id,
+    url: config.apiUrl + '/leagues/' + id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
