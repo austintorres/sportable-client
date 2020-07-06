@@ -5,7 +5,6 @@ const store = require('./../store')
 
 // user sign up
 const signUp = function (data) {
-  console.log(data)
   // return sign up
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -22,7 +21,6 @@ const signUp = function (data) {
 
 // user sign in
 const signIn = function (data) {
-  console.log(data)
   // return the sign in
   return $.ajax({
     url: config.apiUrl + '/sign-in',

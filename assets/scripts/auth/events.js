@@ -17,7 +17,6 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   // prevent refresh
   event.preventDefault()
-  console.log(event)
   const form = event.target
   const data = getFormFields(form)
   console.log(data)

@@ -6,7 +6,6 @@ const createSuccess = function () {
   $('form').trigger('reset')
   $('#message').text('Sign up was successful!')
   $('#message').show().removeClass().addClass('success')
-  console.log('createSuccess')
   $('#sign-in').show()
   $('#sign-up').hide()
   $('#member-switch').hide()
@@ -17,11 +16,9 @@ const createFailure = function () {
   $('form').trigger('reset')
   $('#message').text('Sign up failed!')
   $('#message').show().removeClass().addClass('failure')
-  console.log('createFailure')
 }
 
 const signInSuccess = function (response) {
-  console.log(response)
   $('form').trigger('reset')
   $('#message').text('You are now signed in as, ' + response.user.email)
   $('#message').show().removeClass().addClass('success')
@@ -44,7 +41,6 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function (response) {
-  console.log(response)
   $('form').trigger('reset')
   $('#message').text('You have signed out!')
   $('#message').show().removeClass().addClass('success')
@@ -61,21 +57,27 @@ const signOutSuccess = function (response) {
 }
 
 const signOutFailure = function (response) {
-  console.log(response)
   $('form').trigger('reset')
   $('#message').text('Sign out failed!')
   $('#message').show().removeClass().addClass('failure')
 }
 
 const changePwSuccess = function (response) {
-  console.log(changePwSuccess)
   $('form').trigger('reset')
   $('#message').text('Password was changed successfully!')
   $('#message').show().removeClass().addClass('success')
+  $('#sign-up').show()
+  $('#sign-up-msg').show()
+  $('#member-switch').show()
+  $('#sign-in').hide()
+  $('#sign-out').hide()
+  $('#change-password').hide()
+  $('#create-league').hide()
+  $('#welcome-msg').hide()
+  $('#view-all-leagues-button').hide()
 }
 
 const changePwFailure = function () {
-  console.log(changePwFailure)
   $('form').trigger('reset')
   $('#message').text('Password change was unsuccessful!')
   $('#message').show().removeClass().addClass('failure')
