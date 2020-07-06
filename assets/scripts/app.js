@@ -13,7 +13,7 @@ $(() => {
   $('#create-league').on('submit', leagueEvents.onLeagueCreate)
   $('#view-all-leagues-button').on('click', leagueEvents.onGetLeagues)
   $('.content').on('click', '.remove-league', leagueEvents.onDeleteLeague)
-  $('.content').on('submit', '.update-league-class', leagueEvents.onUpdateLeague)
+  $('.content').on('submit', '.update-league-form', leagueEvents.onUpdateLeague)
   $('#clear-leagues-button').on('click', leagueEvents.onClearLeague)
   // USER DOCS
   $('#sign-up').show()
