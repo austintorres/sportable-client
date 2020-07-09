@@ -53,7 +53,11 @@ const signOutSuccess = function (response) {
   $('#change-password').hide()
   $('#create-league').hide()
   $('#welcome-msg').hide()
+  $('#view-leagues-msg').hide()
   $('#view-all-leagues-button').hide()
+  $('#league-create-msg').hide()
+  $('#clear-league-msg').hide()
+  $('.content').hide()
 }
 
 const signOutFailure = function (response) {

@@ -19,6 +19,7 @@ const getLeaguesSuccess = function (data) {
   console.log(data)
   const leaguesHtml = leaguesTemplate({ leagues: data.leagues })
   $('#league-create-msg').hide()
+  $('#view-all-leagues-button').attr('disabled', true)
   $('#clear-leagues-button').show()
   $('.content').append(leaguesHtml)
   $('#view-leagues-msg').text('Here are your created leagues!')
@@ -55,7 +56,12 @@ const deleteLeagueFailure = function () {
 }
 
 const clearLeagues = function () {
+  $('#clear-league-msg').text('Leagues have been cleared!')
+  $('#view-leagues').show()
   $('.content').empty()
+  $('#league-create-msg').hide()
+  $('#view-leagues-msg').hide()
+
 }
 
 module.exports = {
