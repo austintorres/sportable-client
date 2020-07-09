@@ -6,6 +6,7 @@ const createLeagueSuccess = function (response) {
   console.log(response)
   $('form').trigger('reset')
   $('#league-create-msg').text('Your league created successfully!')
+  $('')
   console.log('createLeagueSuccess')
 }
 
@@ -21,8 +22,11 @@ const getLeaguesSuccess = function (data) {
   $('#league-create-msg').hide()
   $('#view-all-leagues-button').attr('disabled', true)
   $('#clear-leagues-button').show()
+  $('#clear-league-msg').hide()
   $('.content').append(leaguesHtml)
   $('#view-leagues-msg').text('Here are your created leagues!')
+  $('#view-leagues-msg').show()
+  $('#update-league-msg').hide()
 }
 
 const getLeaguesFailure = function () {
@@ -56,9 +60,9 @@ const deleteLeagueFailure = function () {
 }
 
 const clearLeagues = function () {
-  $('#clear-league-msg').text('Leagues have been cleared!')
   $('#view-leagues').show()
   $('.content').empty()
+  $('#view-all-leagues-button').attr('disabled', false)
   $('#league-create-msg').hide()
   $('#view-leagues-msg').hide()
 

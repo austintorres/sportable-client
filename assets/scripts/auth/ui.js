@@ -57,6 +57,7 @@ const signOutSuccess = function (response) {
   $('#view-all-leagues-button').hide()
   $('#league-create-msg').hide()
   $('#clear-league-msg').hide()
+  $('#clear-leagues-button').hide()
   $('.content').hide()
 }
 
