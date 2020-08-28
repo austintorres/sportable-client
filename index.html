@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Sportable</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <!-- headers -->
+      <h1 id="sign-up-msg">Please Sign-Up</h1>
+      <h1 id="sign-in-msg">Please Sign-In</h1>
+      <h1 id="welcome-msg">Welcome</h1>
+
+      <!-- main message -->
+      <p id="message"></p>
+
+      <!-- forms and divs for user -->
+      <section>
+        <!-- user sign-up -->
+        <form id="sign-up">
+          <input required placeholder="Enter e-mail" type="text" name="credentials[email]">
+          <input required placeholder="Enter password" type="password" name="credentials[password]">
+          <input required placeholder="Re-enter password" type="password" name="credentials[password_confirmation]">
+          <button type="submit">Sign Up</button>
+        </form>
+        <!-- user sign-in -->
+        <form id="sign-in">
+          <input required placeholder="Enter e-mail" type="text" name="credentials[email]">
+          <input required placeholder="Enter password" type="password" name="credentials[password]">
+          <button type="submit">Sign In</button>
+        </form>
+        <!-- user sign-out -->
+        <form id="sign-out">
+          <button type="submit">Sign Out</button>
+        </form>
+        <!-- change password -->
+        <form id="change-password">
+          <input required placeholder="Old password" type="password" name="passwords[old]">
+          <input placeholder="New password" type="password" name="passwords[new]">
+          <button type="submit">Change Password</button>
+        </form>
+        <!-- already a member -->
+        <form id="member-switch">
+          <button type="submit">Already A Member?</button>
+        </form>
+        <!-- not a member -->
+        <form id="non-member-switch">
+          <button type="submit">Not A Member?</button>
+        </form>
+      </section>
+
+      <!-- guest login -->
+      <p id='guest-msg-signup'>If you would like to use our guest login, please click the <strong>"Already A Member"</strong> button!</p>
+      <p id='guest-msg-signin'>Guest login credentials:<br/><strong>E-mail:</strong> ny@jets.com | <strong>Password:</strong> namath</p>
+
+      <!-- form to create leagues -->
+      <section>
+        <form id="create-league">
+          <h5>The ball is in your hands..</h5>
+          <input required placeholder="Sport (Baseball, Football, etc.)" type="text" name="league[sport]">
+          <input required placeholder="Name of Sport (MLB, NFL, etc.)" type="text" name="league[name]">
+          <input required placeholder="Description (Favorite team, player, etc.)" type="text" name="league[description]">
+          <button type="submit">Submit Your League!</button>
+        </form>
+      </section>
+        <!-- button to view all created leagues -->
+      <section id="view-leagues">
+        <button id="view-all-leagues-button">View All Leagues</button>
+      </section>
+        <section>
+          <button id="clear-leagues-button" class="btn btn-outline-info">Clear Your Leagues</button>
+        </section>
+
+      <div id="content" class="content"></div>
+
+      <!-- league messages -->
+      <p id="league-create-msg"></p>
+      <p id="view-leagues-msg"></p>
+      <p id="del-league-msg"></p>
+      <p id="update-league-msg"></p>
+      <p id="clear-league-msg"></p>
+    </body>
+</html>
