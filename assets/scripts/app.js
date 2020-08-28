@@ -24,6 +24,7 @@ $(() => {
   // HTML DOCS
   $('#sign-in-msg').hide()
   $('#welcome-msg').hide()
+  $('#guest-msg-signin').hide()
   $('#create-league').hide()
   $('#view-all-leagues-button').hide()
   $('#clear-leagues-button').hide()

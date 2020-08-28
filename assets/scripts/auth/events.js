@@ -51,6 +51,8 @@ const onToggleSignIn = function () {
   $('#sign-up-msg').hide()
   $('#sign-up').hide()
   $('#member-switch').hide()
+  $('#guest-msg-signin').show()
+  $('#guest-msg-signup').hide()
 }
 
 const onToggleSignUp = function () {
@@ -60,6 +62,8 @@ const onToggleSignUp = function () {
   $('#sign-in-msg').hide()
   $('#sign-in').hide()
   $('#member-switch').hide()
+  $('#guest-msg-signin').hide()
+  $('#guest-msg-signup').show()
 }
 
 module.exports = {

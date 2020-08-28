@@ -10,6 +10,8 @@ const createSuccess = function () {
   $('#sign-up').hide()
   $('#member-switch').hide()
   $('#sign-out').hide()
+  $('#guest-msg-signin').hide()
+  $('#guest-msg-signup').hide()
 }
 
 const createFailure = function () {
@@ -32,6 +34,8 @@ const signInSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-in-msg').hide()
   $('#non-member-switch').hide()
+  $('#guest-msg-signin').hide()
+  $('#guest-msg-signup').hide()
 }
 
 const signInFailure = function () {
@@ -59,6 +63,7 @@ const signOutSuccess = function (response) {
   $('#clear-league-msg').hide()
   $('#clear-leagues-button').hide()
   $('.content').hide()
+  $('#guest-msg-signup').show()
 }
 
 const signOutFailure = function (response) {
@@ -80,6 +85,8 @@ const changePwSuccess = function (response) {
   $('#create-league').hide()
   $('#welcome-msg').hide()
   $('#view-all-leagues-button').hide()
+  $('#guest-msg-signin').hide()
+  $('#guest-msg-signup').hide()
 }
 
 const changePwFailure = function () {
